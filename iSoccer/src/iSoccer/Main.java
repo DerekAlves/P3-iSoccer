@@ -259,11 +259,19 @@ public class Main
                     System.out.print("[1] Funcionários;\n");
                     System.out.print("[2] Recursos;\n");
                     System.out.print("[3] Sócios;\n");
+                    System.out.print("[4] Geral;\n");
 
-                    option = exc.loadintmargin(1, 3);
+                    option = exc.loadintmargin(1, 4);
                     if(option == 1) utili.relfunc(clube.getFuncionarios());
                     else if(option == 2) utili.relrec(clube);
                     else if(option == 3) utili.relsoc(clube.getSocios());
+                    else if(option == 4)
+                    {
+                        utili.relfunc(clube.getFuncionarios());
+                        utili.relrec(clube);
+                        utili.relsoc(clube.getSocios());
+                    }
+                        
 
                     System.out.print("Operação Concluída\n");
 
