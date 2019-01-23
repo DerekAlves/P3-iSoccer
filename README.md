@@ -60,13 +60,21 @@ Projeto de Software - iSoccer
     
 # Classes
 ## Clube
-### Motivação
+#### Motivação
 Unir todas as informações referentes ao clube, em um só lugar. Funcionários, Sócios, Recursos...
-### Solução
-Criar 
-### Vantagens
+#### Solução
+Criar a classe clube, que concentra Lista de funcionários, Sócios, Recursos e taxas de associação.
+#### Vantagens
+Unir tudo em um só lugar e evitar de passar muitos argumentos para uma função.
 
-### Desvantagens
+## Funcionários (Super Classe)
+#### Motivação
+Unir todas as informações referentes ao clube, em um só lugar. Funcionários, Sócios, Recursos...
+#### Solução
+Criar a classe clube, que concentra Lista de funcionários, Sócios, Recursos e taxas de associação.
+#### Vantagens
+Unir tudo em um só lugar e evitar de passar muitos argumentos para uma função.
+#### Desvantagens
 
 
     
