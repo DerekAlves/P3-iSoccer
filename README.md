@@ -3,10 +3,16 @@ Projeto de Software - iSoccer
 
 # Funcionalidades
 
+### Método menu, reune todas as funcionalidades abaixo.
+
 ## 1. O sistema só é acessado fornecendo login e senha. o usuário administrador é informado no primeiro acesso ao sistema.
   * Alterar login e senha de administrador.
+  ### Método login, efetua ou não o login do administrador.
 
 ## 2. Gerenciar Funcionários:
+
+### Método addfunc, adiciona um novo funcionário a uma lista de funcionários.
+### Método editjog edita a situação de um jogador (Apto/Inapto).
 
   1. Adição de funcionários:
     Presidente, 
@@ -23,6 +29,9 @@ Projeto de Software - iSoccer
     inapto.
   
 ## 3. Gerenciar sócio torcedores:
+
+### Metodo gersoc, gerencia os sócios.
+### Metodo editsoc, edita um sócio.
   1. Criar taxas de associação.
   2. Adicionar sócio:
     Sócio Júnior, Sócio Sênior, Sócio Elite.
@@ -31,6 +40,7 @@ Projeto de Software - iSoccer
     Inadimplente.
   
 ## 4. Gerenciar Recursos Físicos:
+### Método gerrec, gerencia recursos
   1. Ônibus:
     Adicionar (Capacidade), 
     Verificar disponibilidade.
@@ -59,6 +69,15 @@ Projeto de Software - iSoccer
     Lista com os dados individuais.
     
 # Classes
+
+## ADM
+#### Motivação
+Instanciar um objeto do tipo Adm, que possui login e senha para ter poderes de administrador do sistema.
+#### Solução
+Criar a classe adm, com suas devidas informações e contrutor.
+#### Vantagens
+Poder ter uma classe unica com poderes de administrador do sistema, para fazer as devidas modificações no sistema.
+
 ## Clube
 #### Motivação
 Unir todas as informações referentes ao clube, em um só lugar. Funcionários, Sócios, Recursos...
@@ -140,6 +159,150 @@ Criar a subclasse jogador, contendo o tipo e situação além do seu próprio co
 #### Vantagens
 Ter as informações extras, além do seu construtor, saber qual o tipo de funcionário facilitando a manutenção e reduzindo o esforço de programação.
 
+## Socio (Super Classe)
+#### Motivação
+Instanciar um objeto do tipo sócio, que possui as informações:
+Adimplente e Inadimplente (Estática) e nome, email , cpf, telefone, endereço, valor e situação(Adimplente/Inadimplente).
+#### Solução
+Criar a classe Socio com todas as informações necessárias e seu construtor.
+#### Vantagens
+Ter todas as informações reunidas em um só lugar, possibilitar herança e extensibilidade, ter o costrutor próprio.
 
-    
-   
+### Junior (Subclasse)
+#### Motivação
+Instanciar o objeto do tipo Junior, que possui os atributos da superclasse Socio.
+#### Solução
+Criar a subclasse Junior, e seu próprio construtor.
+#### Vantagens
+Ter o construtor próprio, e saber com facilidade qual o tipo de socio, facilitando a manutenção e reduzindo o esforço de programação.
+
+### Senior (Subclasse)
+#### Motivação
+Instanciar o objeto do tipo Senior, que possui os atributos da superclasse Socio.
+#### Solução
+Criar a subclasse Senior, e seu próprio construtor.
+#### Vantagens
+Ter o construtor próprio, e saber com facilidade qual o tipo de socio, facilitando a manutenção e reduzindo o esforço de programação.
+
+### Elite (Subclasse)
+#### Motivação
+Instanciar o objeto do tipo Elite, que possui os atributos da superclasse Socio.
+#### Solução
+Criar a subclasse Elite, e seu próprio construtor.
+#### Vantagens
+Ter o construtor próprio, e saber com facilidade qual o tipo de socio, facilitando a manutenção e reduzindo o esforço de programação.
+
+## Onibus
+#### Motivação
+Instanciar o objeto do tipo Onibus, que possui como unico atributo a capacidade.
+#### Solução
+Criar a classe Onibus, para que este tipo de objeto poss ser instanciado e ter seu próprio construtor.
+#### Vantagens
+Ter o construtor próprio e usar estruturas de dados para armazenar o tipo de informação, facilitando a manutenção e reduzindo o esforço de programação.
+#### Desvantagens
+Criação de uma classe extra, aumentando o número de classes.
+
+## Estádio
+#### Motivação
+Instanciar o objeto do tipo Etadio, que possui os atributos nome, capacidade, banheiros e lanchonetes.
+#### Solução
+Criar a classe Estadio, com seus atributos e ter seu próprio construtor além de poder armazenar esse tipo de informação em estruturas de dados.
+#### Vantagens
+Ter o construtor próprio, facilitando a manutenção e reduzindo o esforço de manutenção.
+#### Desvantagens
+Criação de uma classe extra, aumentando o número de classes.
+
+## CT
+#### Motivação
+Instanciar o objeto do tipo CT, que possui os atributos nome e capacidade.
+#### Solução
+Criar a subclasse CT, e seu próprio construtor.
+#### Vantagens
+Ter o construtor próprio, facilitando a manutenção e reduzindo o esforço de programação, além de poder armazenar este tipo de dado em estruturas de dados.
+#### Desvantagens
+Criação de uma classe extra, aumentando o número de classes.
+
+# Distribuição dos Métodos
+## Métodos na Main/iSoccerE/iSoccerU
+### Motivação
+Distribuir de forma que reduza o esforço de programação os métodos
+### Solução
+Os Métodos ficaram distribuidos em três classes. na main, iSoccerU e iSoccerE.
+Os métodos da main são as funções básicas do sistema, menu, adicionar funcionario, sócio, recursos, relatorios.
+Os métodos da iSoccerU concentram utilidades, como encontrar um funcionário/socio/em uma lista dentre outras utilidades.
+Os métodos da iSoccerE concentram exceptions, como ler inteiro/float e ler inteiro dentro de uma margem especificada, por exemplo leia um número entre (1, 2), só seriam aceitos 1, ou 2.
+### Vantagens
+Concentrar os métodos em locais chave do programa, reduzindo o esforço de programação.
+
+# Herança
+## Funcionario
+### Motivação
+Criar subclasses do tipo funcionario, para representar diferentes tipos de funcionarios.
+### Solução
+Foram criadas oito subclasses, sendo estas Presidente, Médico, Técnico, Preparador, Motoristas, Cozinheiro, Advogado e Jogador para representar cada tipo de funcionario.
+### Vantagens
+Saber qual o tipo de funcionario, além de poder juntar em uma unica superclasse diversas peculiaridades de cada tipo de funcionário.
+
+## Socio
+### Motivação
+Criar subclasses do tipo Socio, para representar diferentes tipos de Socios.
+### Solução
+Foram criadas tres subclasses, sendo estas Junior, Senior e Elite para representar cada tipo de socio.
+### Vantagens
+Saber qual o tipo de socio, além de poder juntar em uma unica superclasse diversas peculiaridades de cada tipo de socio.
+
+# Interface
+
+## Utilidades / iSoccerU
+### Motivação
+Criar uma interface para reunir funcões úteis que devem ser implementadas.
+### Solução
+Criar a iSoccerU reunindo todas as funções necessárias para serem usadas e reusadas em diversos métodos.
+### Vantagens
+Impõe a um terceiro porgramador estabelecer funções básicas para serem usadas nos métodos.
+
+## Exception / iSoccerE - A ser esclarecida Tratamento de Exceções.
+
+# Tratamento de Exceções
+## Exception / iSoccerE
+### Motivação
+Estabelecer métodos para garantir que exceções não ocorram, prejudicando assim a execução do sistema.
+### Solução
+Criar a interface de Exception para garantir que métodos de exceção sejam implementadose garantir o bom funcionamento do sistema.
+### Vantagens
+Garantir que não ocorram exceções no sistema.
+
+# Extensibilidade
+
+## Funcionario
+### Motivação
+Criar subclasses do tipo funcionario, para representar diferentes tipos de funcionarios.
+### Solução
+Foram criadas oito subclasses, sendo estas Presidente, Médico, Técnico, Preparador, Motoristas, Cozinheiro, Advogado e Jogador para representar cada tipo de funcionario.
+### Vantagens
+Saber qual o tipo de funcionario, além de poder juntar em uma unica superclasse diversas peculiaridades de cada tipo de funcionário e garantir extensibilidade reduzindo o esforço ao criar um novo tipo de funcionário, ou seja subclasse.
+
+## Socio
+### Motivação
+Criar subclasses do tipo Socio, para representar diferentes tipos de Socios.
+### Solução
+Foram criadas tres subclasses, sendo estas Junior, Senior e Elite para representar cada tipo de socio.
+### Vantagens
+Saber qual o tipo de socio, além de poder juntar em uma unica superclasse diversas peculiaridades de cada tipo de socio e garantir extensibilidade reduzindo o esforço ao criar um novo tipo de socio, ou seja subclasse.
+
+# Reuso
+## Construtores de Socio e Funcionario
+### Motivação
+Serem utilizados em todas as subclasses.
+### Solução
+Criar o Construtor e usar em todas as subclasses, reduzindo o esforço e programação e clones de código.
+### Vantagens
+Reduzir clonagem de código e esforço de programação.
+
+## Exceptions - iSoccerE - loadint, loaddouble, loadintmargin.
+### Motivação
+Ler com segurança inteiros, reais e inteiros dentro de uma margem.
+### Solução
+Criar as funções para ler os tipos de dados, e usar em diversos momentos do sistema, como acessar opções em um menu, ou adicionar salário (Funcionario) ou custo de associação (Socio).
+### Vantagens
+Usar em várias partes do código, para evitar clones.
