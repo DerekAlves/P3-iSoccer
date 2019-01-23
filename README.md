@@ -9,14 +9,14 @@ Projeto de Software - iSoccer
 ## 2. Gerenciar Funcionários:
 
   1. Adição de funcionários:
-    * Presidente.
-    * Médico.
-    * Técnico.
-    * Preparadores físicos.
-    * Motoristas.
-    * Cozinheiros.
-    * Advogados.
-    * Jogador.
+    * Presidente
+    * Médico
+    * Técnico
+    * Preparadores físicos
+    * Motoristas
+    * Cozinheiros
+    * Advogados
+    * Jogador
     
   2. Editar situção do jogador:
     * Apto.
