@@ -59,8 +59,14 @@ Projeto de Software - iSoccer
     Lista com os dados individuais.
     
 # Classes
+## Clube
+### Motivação
+Unir todas as informações referentes ao clube, em um só lugar. Funcionários, Sócios, Recursos...
+### Solução
+Criar 
+### Vantagens
 
- 1.
+### Desvantagens
 
 
     
