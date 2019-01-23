@@ -9,28 +9,28 @@ Projeto de Software - iSoccer
 2. Gerenciar Funcionários:
 
   1. Adição de funcionários:
-    a. Presidente;
-    b. Médico;
-    c. Técnico;
-    d. Preparadores físicos;
-    e. Motoristas; 
-    f. Cozinheiros;
-    g. Advogados;
-    h. Jogador;
+    a. Presidente.
+    b. Médico.
+    c. Técnico.
+    d. Preparadores físicos.
+    e. Motoristas.
+    f. Cozinheiros.
+    g. Advogados.
+    h. Jogador.
     
   2. Editar situção do jogador:
-    a. Apto;
-    b. inapto
+    a. Apto.
+    b. inapto.
   
 3. Gerenciar sócio torcedores:
   1. Criar taxas de associação.
   2. Adicionar sócio:
-    a. Sócio Júnior;
-    b. Sócio Sênior;
-    c. Sócio Elite;
+    a. Sócio Júnior.
+    b. Sócio Sênior.
+    c. Sócio Elite.
   3. Editar Situação do Sócio:
-    a. Adimplente;
-    b. Inadimplente;
+    a. Adimplente.
+    b. Inadimplente.
   
 4. Gerenciar Recursos Físicos:
   1. Ônibus:
