@@ -3,18 +3,33 @@ Projeto de Software - iSoccer
 
 # Funcionalidades
 
-### Método menu, reune todas as funcionalidades abaixo.
+#### Método menu, reune todas as funcionalidades abaixo.
+#### Motivação
+* criar um método, que reuna todas as funcionalidades do sistema, e que garanta o funcionamento continuo do sistema, até que o usuário resolva parar a execução, como banco de dados não é utilizado, todas as informações do sistema serão perdidas ao finalizar a execução.
+#### Solução
+* Criar o método menu, reunindo todas as funcionalidades do sistema, junto de um loop(while) que garante a execução contínua do sistema, até que o usuário resolva parar a execução. o método menu está localizado na classe Main, pois será chamado no método main apenas uma vez.
+#### Vantagens
+* Reunir todos as funcionalidades do sistema em um único método, que garante que o usuário escolha qual funcionalidade usar em um determinado momento e o uso contínuo do sistema até que o usuário encerre a execução.
+#### Desvantagens
+* Como banco de dados não foi usado, ao encerrar a execução todas as informações cadastradas no sistema serão perdidas.
 
-## 1. O sistema só é acessado fornecendo login e senha. o usuário administrador é informado no primeiro acesso ao sistema.
+### Funcionalidade - 1. O sistema só é acessado fornecendo login e senha. o usuário administrador é informado no primeiro acesso ao sistema.
   * Alterar login e senha de administrador.
-  ### Método login, efetua ou não o login do administrador.
+  #### Método login
+  #### Motivação
+  * Possibilitar o login do administrador.
+  #### Solução
+  * Criar o método login, que está presente na Classe Main, pois só será usado no método menu para possibilitar o login de um administrador do sistema.
+  #### Vantagens
+  * Garantir que só o administrador do sistema possa fazer alterações, evitando assim que terceiros modifiquem ou tenham acesso a informações sigilosas presentes no sistema.
+  #### Desvantagens
+  * Se o administrador não estiver disponível, alterações e consultas não poderão ser efetuadas.
 
 ## 2. Gerenciar Funcionários:
 
-### Método addfunc, adiciona um novo funcionário a uma lista de funcionários.
-### Método editjog edita a situação de um jogador (Apto/Inapto).
-
-  1. Adição de funcionários:
+#### Método 1
+* void addfunc(ArrayList<Funcionarios> funcionarios), adiciona um novo funcionário a uma lista de funcionários.
+ 1. Adição de funcionários:
     Presidente, 
     Médico, 
     Técnico, 
@@ -23,8 +38,19 @@ Projeto de Software - iSoccer
     Cozinheiros, 
     Advogados, 
     Jogador.
-    
-  2. Editar situção do jogador:
+
+#### Motivação
+* Criar um método que reuna toda a criação de um funcionário, em um só lugar. Possibilitando que o administrador escolha qual o tipo de funcionário, e assim criar o funcionário específico, logo em seguida após o funcionário ser criado, ele será adicionado em uma lista de funcionários, para consultas futuras ou edição de informações a respeito de um funcionário.
+#### Solução
+* É criado o método addfunc, que cuida da adição de funcionário a uma lista, dando a opção de qual funcionário vai ser adicionado e criando assim o funcionário específico do tipo solicitado pelo administrador.
+#### Vantagens
+* Reunir a criação de funcionário em um único método que irá usar o construtor específico de cada tipo de funcionário, dependendo da escolha do administrador, e assim adicionar o funcionário a uma lista de funcionários.
+#### Desvantagens
+* Por usar lista, alguns algoritmos de busca específicos tiveram que ser implementados.
+
+### Método 2
+* void editjog(ArrayList<Funcionarios> func), edita a situação de um jogador (Apto/Inapto).
+ 2. Editar situação do jogador:
     Apto, 
     inapto.
   
